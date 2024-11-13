@@ -190,8 +190,10 @@ const void *const __SECTION(".text.boot.vectab2") vectab2[] = {
     VECTAB_ENTRY(DMA2_Stream2_IRQ),         /* DMA2 Stream 2 global Interrupt                                    */
     VECTAB_ENTRY(DMA2_Stream3_IRQ),         /* DMA2 Stream 3 global Interrupt                                    */
     VECTAB_ENTRY(DMA2_Stream4_IRQ),         /* DMA2 Stream 4 global Interrupt                                    */
+#ifndef STM32F446xx
     VECTAB_ENTRY(ETH_IRQ),                  /* Ethernet global Interrupt                                         */
     VECTAB_ENTRY(ETH_WKUP_IRQ),             /* Ethernet Wakeup through EXTI line Interrupt                       */
+#endif
     VECTAB_ENTRY(CAN2_TX_IRQ),              /* CAN2 TX Interrupt                                                 */
     VECTAB_ENTRY(CAN2_RX0_IRQ),             /* CAN2 RX0 Interrupt                                                */
     VECTAB_ENTRY(CAN2_RX1_IRQ),             /* CAN2 RX1 Interrupt                                                */
@@ -208,7 +210,9 @@ const void *const __SECTION(".text.boot.vectab2") vectab2[] = {
     VECTAB_ENTRY(OTG_HS_WKUP_IRQ),          /* USB OTG HS Wakeup through EXTI interrupt                          */
     VECTAB_ENTRY(OTG_HS_IRQ),               /* USB OTG HS global interrupt                                       */
     VECTAB_ENTRY(DCMI_IRQ),                 /* DCMI global interrupt                                             */
+#ifndef STM32F446xx
     VECTAB_ENTRY(CRYP_IRQ),                 /* CRYP crypto global interrupt                                      */
     VECTAB_ENTRY(HASH_RNG_IRQ),             /* Hash and Rng global interrupt                                     */
+#endif
 };
 

@@ -45,7 +45,7 @@ MODULE_SRCS += \
 	$(LOCAL_DIR)/src/stm32f4xx_wwdg.c \
 	$(LOCAL_DIR)/src/system_stm32f4xx.c
 
-ifeq ($(STM32_CHIP),stm32f429)
+ifeq ($(filter $(STM32_CHIP),(stm32f429 stm32f446)),)
 	MODULE_SRCS += $(LOCAL_DIR)/src/stm32f4xx_fmc.c
 else
 	MODULE_SRCS += $(LOCAL_DIR)/src/stm32f4xx_fsmc.c
